@@ -7,3 +7,11 @@ CREATE TABLE images
 	imageurl VARCHAR(400) NOT NULL,
 	category VARCHAR NOT NULL
 );
+
+
+CREATE TABLE quotes
+(
+	id int NOT NULL AUTO_INCREMENT,
+	quote VARCHAR(400) NOT NULL,
+	category VARCHAR NOT NULL
+);
