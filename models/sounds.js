@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Image = sequelize.define("Image", {
+  var Image = sequelize.define("Sounds", {
     imageurl: {
       type: DataTypes.STRING,
       allowNull: false
@@ -17,5 +17,5 @@ module.exports = function(sequelize, DataTypes) {
       defaultValue: sequelize.literal('NOW()')
     }
   });
-  return Image;
+  return Sounds;
 };
