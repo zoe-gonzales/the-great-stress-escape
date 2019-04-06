@@ -1,4 +1,9 @@
-.list-group-item {
-  line-height: 2.5;
+body {
+  background-image: url("../assets/images/jerusalem-artichoke-blue-sky.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
- 
+
+.jumbotron, .card {
+  opacity: 0.7;
+}
