@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Image = sequelize.define("Sounds", {
+  var Sounds = sequelize.define("Sounds", {
     imageurl: {
       type: DataTypes.STRING,
       allowNull: false
