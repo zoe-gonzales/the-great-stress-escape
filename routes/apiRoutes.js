@@ -8,10 +8,10 @@ module.exports = function(app) {
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  // Sends user input from add.handlebars to db
+  app.post("/api/quotes", function(req, res) {
+    db.Quote.create(req.body).then(function(result) {
+      res.json(result);
     });
   });
 
