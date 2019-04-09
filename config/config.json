@@ -1,5 +1,6 @@
 {
-  "development": {},
+  "development": {
+  },
   "test": {
     "username": "root",
     "password": null,
