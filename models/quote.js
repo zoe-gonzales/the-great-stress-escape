@@ -19,19 +19,3 @@ module.exports = function(sequelize, DataTypes) {
   });
   return Quote;
 }; 
-<<<<<<< Updated upstream
-
-//readme for iquotes: https://github.com/banminkyoz/iquotes
-const iquotes = require('iquotes');
-
-iquotes.random();
-
-//Get random quote for a category
-//Categories: life, love, dev (development), and all
-iquotes.random('life');
-
-console.log(iquotes.random());
-
-// module.exports = Search;
-=======
->>>>>>> Stashed changes
