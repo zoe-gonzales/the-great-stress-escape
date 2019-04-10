@@ -5,7 +5,8 @@
         <div class="jumbotron jumbotron-fluid text-center">
             <div class="container">
                 <h1 class="display-3 font-weight-bold">The Great Stress Escape</h1>
-                <p class="lead display-5">Feeling frazzled? Take a few brief moments to deprogram with calming images, inspirational quotes, or soothing sounds.</p>
+                <p class="lead display-5">Feeling frazzled? Take a few brief moments to deprogram with calming images,
+                    inspirational quotes, or soothing sounds.</p>
             </div>
             <!-- </div> -->
         </div>
@@ -19,16 +20,23 @@
                 <!-- First card: -->
                 <div class="card">
                     <div class="card-header text-center display-4">Calming Images</div>
-                    <img src="../public/assets/images/calm_silhouette.jpg" class="card-img-top" alt="calm silhouette">
+                    <img src="../public/assets/images/calm_silhouette.jpg" class="card-img-top"
+                        style="width: 400px; height: 400px;" alt="calm silhouette">
                     <div class="card-body">
-                        <p class="card-text"><button type="button" class="btn btn-light">Light</button></p>
+                        <div class="row">
+                            <div class="col-md-5"></div>
+                            <div class="col-md-2">
+                                <button type="button" id="get-image" class="btn btn-light align-content">Calm</button>
+                            </div>
+                            <div class="col-md-5"></div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- <div class="col"> -->
-                <!-- Second card: -->
-                <!-- <div class="card">
+            <!-- Second card: -->
+            <!-- <div class="card">
                     <div class="card-header">Funny Animal Videos</div>
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
@@ -40,10 +48,20 @@
             <div class="col">
                 <!-- Second card: -->
                 <div class="card">
-                    <div class="card-header text-center display-4">Inspiring words</div>
-                    <img src="../public/assets/images/inspiring_words.jpg" class="card-img-top" alt="inspiring words">
+                    <div class="card-header text-center display-4">Inspiring Words</div>
+                    <img src="../public/assets/images/inspiring_words.jpg" class="card-img-top"
+                        style="width: 450px; height: 400px;" alt="inspiring words">
                     <div class="card-body">
-                        <p class="card-text">...</p>
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3">
+                                <button type="button" id="get-random-quote" class="btn btn-light align-content">Get Inspiration</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" id="get-user-quote" class="btn btn-light align-content">Give Inspiration</button>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -52,12 +70,20 @@
                 <!-- Third card: -->
                 <div class="card">
                     <div class="card-header text-center display-4">Soothing Sounds</div>
-                    <img src="../public/assets/images/music_notes.jpg" class="card-img-top" alt="music notes">
+                    <img src="../public/assets/images/music_notes.jpg" class="card-img-top"
+                        style="width: 400px; height: 400px;" alt="music notes">
                     <div class="card-body">
-                        <p class="card-text">...</p>
+                        <div class="row">
+                            <div class="col-md-5"></div>
+                            <div class="col-md-2">
+                                <button type="button" id="get-sound" class="btn btn-light align-content">Relax</button>
+                            </div>
+                            <div class="col-md-5"></div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- End of row with cards -->
         </div>
+
     </div>
