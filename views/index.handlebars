@@ -1,33 +1,63 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
+<!--Main Container for Everything-->
+    <div class="container-fluid">
+        <!-- <div class="row"> -->
+        <!--Jumbotron Header-->
+        <div class="jumbotron jumbotron-fluid text-center">
+            <div class="container">
+                <h1 class="display-3 font-weight-bold">The Great Stress Escape</h1>
+                <p class="lead display-5">Feeling frazzled? Take a few brief moments to deprogram with calming images, inspirational quotes, or soothing sounds.</p>
+            </div>
+            <!-- </div> -->
+        </div>
     </div>
-  </div>
-</div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+    <!--Container for Cards-->
+    <div class="container-fluid">
+        <!-- Row with cards -->
+        <div class="row">
+            <div class="col">
+                <!-- First card: -->
+                <div class="card">
+                    <div class="card-header text-center display-4">Calming Images</div>
+                    <img src="../public/assets/images/calm_silhouette.jpg" class="card-img-top" alt="calm silhouette">
+                    <div class="card-body">
+                        <p class="card-text">...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col"> -->
+                <!-- Second card: -->
+                <!-- <div class="card">
+                    <div class="card-header">Funny Animal Videos</div>
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">...</p>
+                    </div>
+                </div>
+                </div> -->
+
+            <div class="col">
+                <!-- Second card: -->
+                <div class="card">
+                    <div class="card-header text-center display-4">Inspiring words</div>
+                    <img src="../public/assets/images/inspiring_words.jpg" class="card-img-top" alt="inspiring words">
+                    <div class="card-body">
+                        <p class="card-text">...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <!-- Third card: -->
+                <div class="card">
+                    <div class="card-header text-center display-4">Soothing Sounds</div>
+                    <img src="../public/assets/images/music_notes.jpg" class="card-img-top" alt="music notes">
+                    <div class="card-body">
+                        <p class="card-text">...</p>
+                    </div>
+                </div>
+            </div>
+            <!-- End of row with cards -->
+        </div>
+    </div>
