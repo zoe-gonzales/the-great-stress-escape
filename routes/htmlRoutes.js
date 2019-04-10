@@ -8,11 +8,9 @@ module.exports = function(app) {
 
   // Load example page and pass in an example by id
   app.get("/images/:id", function(req, res) {
-    db.Image.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+    db.Image.findOne({ where: { id: req.params.id } }).then(function(dbImages) {
       // need to change handlebars reference
-      res.render("index", {
-        images: dbImages
-      });
+      res.send(dbImages);
     });
   });
 
@@ -39,9 +37,7 @@ module.exports = function(app) {
       // need to change handlebars reference
       // add func. to pass results through iquotes package
       // https://www.npmjs.com/package/iquotes
-    res.render("index", {
-      quotes: iquotes.random()
-    });
+    res.send(iquotes.random());
   });
 
   app.get("/sounds/", function(req, res) {
