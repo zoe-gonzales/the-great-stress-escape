@@ -1,5 +1,11 @@
 {
   "development": {
+    "username": "root",
+    "password": null,
+    "database": "testdb",
+    "host": "localhost",
+    "dialect": "mysql",
+    "logging": false
   },
   "test": {
     "username": "root",
