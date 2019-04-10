@@ -19,6 +19,7 @@ module.exports = function(sequelize, DataTypes) {
   });
   return Quote;
 }; 
+<<<<<<< Updated upstream
 
 //readme for iquotes: https://github.com/banminkyoz/iquotes
 const iquotes = require('iquotes');
@@ -32,3 +33,5 @@ iquotes.random('life');
 console.log(iquotes.random());
 
 // module.exports = Search;
+=======
+>>>>>>> Stashed changes
