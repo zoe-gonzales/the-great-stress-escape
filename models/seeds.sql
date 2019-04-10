@@ -30,6 +30,17 @@ INSERT INTO quotes (quote, category) VALUES ('http://www.google.com/', landscape
 INSERT INTO quotes (quote, category) VALUES ('http://www.google.com/', landscape);
 
 
+INSERT INTO Sounds (imageurl, category) VALUES ('https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX4PP3DA4J0N8', 'nature sounds');
+
+INSERT INTO Sounds (imageurl, category) VALUES ('https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWVS1recTqXhf', 'meditation');
+
+INSERT INTO Sounds (imageurl, category) VALUES ('https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWSRoT7QRAibZ', 'comedy');
+
+INSERT INTO Sounds (imageurl, category) VALUES ('https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWZyr63wC7yP0', 'nature sounds');
+
+INSERT INTO Sounds (imageurl, category) VALUES ('https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX9O8pzsnCkf6', 'comedy');
+
+INSERT INTO Sounds (imageurl, category) VALUES ('https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWZqd5JICZI0u', 'meditation');
 
 -- Spotify embed structure
 -- <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX4PP3DA4J0N8" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
