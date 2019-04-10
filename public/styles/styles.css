@@ -1,3 +1,16 @@
-.list-group-item {
-  line-height: 2.5;
+body {
+  background-image: url("../assets/images/sun_clouds.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.jumbotron {
+  background-image: url("../assets/images/sun_clouds.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0.7;
+}
+
+.card {
+  opacity: 0.7;
 }

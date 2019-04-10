@@ -1,5 +1,20 @@
-DROP DATABASE IF EXISTS exampledb;
-CREATE DATABASE exampledb;
+DROP DATABASE IF EXISTS destressordb;
+CREATE DATABASE destressordb;
 
-DROP DATABASE IF EXISTS testdb;
-CREATE DATABASE testdb;
+
+USE destressordb;
+CREATE TABLE images
+(
+	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	imageurl VARCHAR(400) NOT NULL,
+	category VARCHAR(100)
+);
+
+
+USE destressordb;
+CREATE TABLE quotes
+(
+	id int NOT NULL AUTO_INCREMENT,
+	quote VARCHAR(400) NOT NULL,
+	category VARCHAR NOT NULL
+);

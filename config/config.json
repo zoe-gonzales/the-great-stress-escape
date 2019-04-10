@@ -2,9 +2,10 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "exampledb",
+    "database": "testdb",
     "host": "localhost",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "logging": false
   },
   "test": {
     "username": "root",
