@@ -11,7 +11,7 @@ function Search() {
             var index = Math.floor(Math.random() * 10);
             var string = response.playlists.items[index].uri;
             var id = string.split(':').pop();
-            console.log( 'https://open.spotify.com/playlist/' + id);
+            console.log( 'https://open.spotify.com/embed/user/spotify/playlist/' + id);
         })
         .catch(function(err) {
             console.log(err);
