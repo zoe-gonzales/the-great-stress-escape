@@ -30,3 +30,5 @@ iquotes.random();
 iquotes.random('life');
 
 console.log(iquotes.random());
+
+// module.exports = Search;
