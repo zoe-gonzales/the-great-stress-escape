@@ -16,14 +16,12 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/quotes/:id", function(req, res) {
-    db.Quote.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+  app.get("/quotes/user", function(req, res) {
+    db.Quote.findAll({}).then(function(dbData) {
       // need to change handlebars reference
       // add func. to pass results through iquotes package
       // https://www.npmjs.com/package/iquotes
-      res.render("index", {
-        quotes: dbquotes
-      });
+      res.send(dbData);
     });
   });
 
@@ -46,13 +44,11 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/sounds/:id", function(req, res) {
-    db.Sound.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+  app.get("/sounds/", function(req, res) {
+    db.Sound.findAll({}).then(function(dbData) {
       // need to change handlebars reference
       // add functionality to pass results through spotify
-      res.render("index", {
-        sounds: dbSounds
-      });
+      res.send(dbData);
     });
   });
 

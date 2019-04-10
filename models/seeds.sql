@@ -21,3 +21,18 @@ INSERT INTO Images (imageurl, category) VALUES ('/assets/images/vines.jpg', 'pla
 
 
 
+
+
+INSERT INTO quotes (quote, category) VALUES ('http://www.google.com/', landscape);
+INSERT INTO quotes (quote, category) VALUES ('http://www.google.com/', landscape);
+INSERT INTO quotes (quote, category) VALUES ('http://www.google.com/', landscape);
+INSERT INTO quotes (quote, category) VALUES ('http://www.google.com/', landscape);
+INSERT INTO quotes (quote, category) VALUES ('http://www.google.com/', landscape);
+
+
+
+-- Spotify embed structure
+-- <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX4PP3DA4J0N8" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+-- Image embed structure
+-- <img src="image-source-path" width="xxx">
