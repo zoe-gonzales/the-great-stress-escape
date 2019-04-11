@@ -1,4 +1,6 @@
 var db = require("../models");
+var Spotify = require("../apis/spotify");
+var spotify = new Spotify();
 
 module.exports = function(app) {
   // Get all examples
@@ -27,4 +29,19 @@ module.exports = function(app) {
       res.json(result);
     });
   });
+
+  // Posting user selections of playlist category
+  app.post("/api/sounds", function(req, res) {
+    var category = req.body.category;
+    spotify.searchSpotify(category, addSound, res);
+  });
+
+  function addSound(source, category, res){
+    db.Sounds.create({
+      imageurl: source,
+      category: category
+    }).then(function(result) {
+      res.json(result);
+    });
+  }
 };

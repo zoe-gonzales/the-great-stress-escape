@@ -40,8 +40,8 @@ module.exports = function(app) {
     res.send(iquotes.random());
   });
 
-  app.get("/sounds/", function(req, res) {
-    db.Sound.findAll({}).then(function(dbData) {
+  app.get("/sounds", function(req, res) {
+    db.Sounds.findAll({}).then(function(dbData) {
       // need to change handlebars reference
       // add functionality to pass results through spotify
       res.send(dbData);
