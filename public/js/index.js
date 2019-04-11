@@ -74,7 +74,7 @@ $(document).ready(function(){
 
   // When user clicks sound button
   $("#get-sound").on("click", function(){
-    $.ajax("/sounds", {
+    $.ajax("/api/sounds/", {
       method: "GET"
     }).then(function(data){
       console.log(data);
