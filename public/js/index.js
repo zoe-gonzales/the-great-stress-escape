@@ -74,13 +74,33 @@ $(document).ready(function(){
 
   // When user clicks sound button
   $("#get-sound").on("click", function(){
+    console.log("REQEUST");
+    $.ajax("/sounds", {
     $.ajax("/api/sounds/", {
       method: "GET"
     }).then(function(data){
       console.log(data);
-      var index = Math.round(Math.random() * data.length);
+      var index = Math.floor(Math.random() * data.length);
+      console.log("INDEX: " + index);
       var selectedSound = data[index];
       console.log(selectedSound);
+      var playlisturl = selectedSound.playlisturl;
+      $("#playlist-div").html('<iframe src="'+playlisturl+'" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
+
     });
   });
+
+/*
+  $(function () {
+    var i = Image.imageurl;
+    for (i=0; i < Math.floor(Math.random() * 21); i++){
+        var curImg = i;
+        var img = new Image();         
+        $(img).load(function () {                                 
+            $('#imageLoad').removeClass('loading')
+                        .append($('<img src="'+this.curImg+'">').append(this));
+        }).error(function () {})                            
+    }
+  });
+  */
 });
