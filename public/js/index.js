@@ -1,6 +1,6 @@
 // ====End of Example jQuery & start of functionality for add.handlebars===== //
 $(document).ready(function(){
-
+  // Adding a quote
   $("#add-quote").on("submit", function(event){
     event.preventDefault();
 
@@ -19,10 +19,26 @@ $(document).ready(function(){
       method: "POST",
       data: newQuote
     }).then(function(){
-      location.reload();
+      $("#quote-result").text("Quote added.");
     });
   });
+  
+  // Adding a playlist
+  $("#add-playlist").on("submit",function(event){
+    event.preventDefault();
 
+    var newData = {
+      category:$("#playlist").val()
+    }
+
+    $.ajax("/api/sounds", {
+      method: "POST",
+      data: newData
+    }).then(function(){
+      $("#playlist-result").text("Playlist added.");
+    });
+
+  });
 
   // When user clicks image button
   $("#get-image").on("click", function(){
@@ -58,7 +74,7 @@ $(document).ready(function(){
 
   // When user clicks sound button
   $("#get-sound").on("click", function(){
-    $.ajax("/sounds/", {
+    $.ajax("/sounds", {
       method: "GET"
     }).then(function(data){
       console.log(data);
