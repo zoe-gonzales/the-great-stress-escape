@@ -41,9 +41,11 @@ module.exports = function(app) {
   });
 
   app.get("/sounds", function(req, res) {
+    console.log("HERE I AM");
     db.Sounds.findAll({}).then(function(dbData) {
       // need to change handlebars reference
       // add functionality to pass results through spotify
+      console.log(dbData);
       res.send(dbData);
     });
   });
