@@ -76,6 +76,7 @@ $(document).ready(function(){
   $("#get-sound").on("click", function(){
     console.log("REQEUST");
     $.ajax("/sounds", {
+    // $.ajax("/api/sounds/", {
       method: "GET"
     }).then(function(data){
       console.log(data);
