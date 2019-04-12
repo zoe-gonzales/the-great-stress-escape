@@ -3,24 +3,30 @@ $(document).ready(function(){
   // Adding a quote
   $("#add-quote").on("submit", function(event){
     event.preventDefault();
+    var newQuote = {};
+    var quote = $("#add-quote [name=text]").val().trim();
+    var category = $("#add-quote [name=category]").val().trim();
 
     // Grabbing user input from form
-    var newQuote = {
-      quote: $("#add-quote [name=text]").val().trim(),
-      category: $("#add-quote [name=category]").val().trim()
-    };
-    
-    // Clearing form fields for appearance
-    $("#add-quote [name=text]").val("");
-    $("#add-quote [name=category]").val("");
+    if (!quote || !category){
+      $("#quote-result").text("Please complete all fields.");
+    } else {
+      newQuote.quote = quote;
+      newQuote.category = category;
 
-    // Post request with newQuote data
-    $.ajax('/api/quotes', {
-      method: "POST",
-      data: newQuote
-    }).then(function(){
-      $("#quote-result").text("Quote added.");
-    });
+      // Clearing form fields for appearance
+      $("#add-quote [name=text]").val("");
+      $("#add-quote [name=category]").val("");
+
+      // Post request with newQuote data
+      $.ajax('/api/quotes', {
+        method: "POST",
+        data: newQuote
+      }).then(function(){
+        $("#quote-result").text("Quote added.");
+      });
+    }
+    
   });
   
   // Adding a playlist
