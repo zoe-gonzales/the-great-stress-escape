@@ -57,6 +57,14 @@ $(document).ready(function(){
       method: "GET"
     }).then(function(data){
       console.log(data);
+      $("#quote-image").hide();
+      var quote = $("<p>");
+      var author = $("<p>");
+      var category = $("<p>");
+      quote.text(`Quote: ${data.quote}`);
+      author.text(`Author: ${data.author}`);
+      category.text(`Category: ${data.category}`);
+      $("#quote").append(quote, author, category);
     });
   });
 
@@ -66,7 +74,7 @@ $(document).ready(function(){
       method: "GET"
     }).then(function(data){
       console.log(data);
-      var index = Math.round(Math.random() * data.length);
+      var index = Math.floor(Math.random() * data.length);
       var selectedQuote = data[index];
       console.log(selectedQuote);
     });
