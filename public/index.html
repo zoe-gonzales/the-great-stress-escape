@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--Link to stylesheet-->
-    <link rel="stylesheet" type="text/css" media="screen" href="../public/styles/styles.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/styles.css" />
     <title>The Great Stress Escape</title>
 </head>
 
@@ -22,7 +22,8 @@
         <div class="jumbotron jumbotron-fluid text-center">
             <div class="container">
                 <h1 class="display-3 font-weight-bold">The Great Stress Escape</h1>
-                <p class="lead display-5">Feeling frazzled? Take a few brief moments to deprogram with calming images, inspirational quotes, or soothing sounds.</p>
+                <p class="lead display-5">Feeling frazzled? Take a few brief moments to deprogram with calming images,
+                    inspirational quotes, or soothing sounds.</p>
             </div>
             <!-- </div> -->
         </div>
@@ -36,16 +37,23 @@
                 <!-- First card: -->
                 <div class="card">
                     <div class="card-header text-center display-4">Calming Images</div>
-                    <img src="../public/assets/images/calm_silhouette.jpg" class="card-img-top" alt="calm silhouette">
+                    <img src="assets/images/calm_silhouette.jpg" id="calm-image" class="card-img-top" style="width: 400px; height: 400px;" alt="calm silhouette">
+
                     <div class="card-body">
-                        <p class="card-text">...</p>
+                        <div class="row">
+                            <div class="col-md-5"></div>
+                            <div class="col-md-2">
+                                <button onclick='addImage()' type="button" id="get-image" class="btn btn-light align-content">Calm</button>
+                            </div>
+                            <div class="col-md-5"></div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- <div class="col"> -->
-                <!-- Second card: -->
-                <!-- <div class="card">
+            <!-- Second card: -->
+            <!-- <div class="card">
                     <div class="card-header">Funny Animal Videos</div>
                     <img src="..." class="card-img-top" alt="...">
                     <div class="card-body">
@@ -58,9 +66,20 @@
                 <!-- Second card: -->
                 <div class="card">
                     <div class="card-header text-center display-4">Inspiring words</div>
-                    <img src="../public/assets/images/inspiring_words.jpg" class="card-img-top" alt="inspiring words">
+                    <img src="assets/images/inspiring_words.jpg" class="card-img-top" style="width: 450px; height: 375px;" alt="inspiring words">
                     <div class="card-body">
-                        <p class="card-text">...</p>
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3">
+                                <button type="button" id="get-random-quote" class="btn btn-light align-content">Get
+                                    Inspiration</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="button" id="get-user-quote" class="btn btn-light align-content">Give
+                                    Inspiration</button>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -69,27 +88,27 @@
                 <!-- Third card: -->
                 <div class="card">
                     <div class="card-header text-center display-4">Soothing Sounds</div>
-                    <img src="../public/assets/images/music_notes.jpg" class="card-img-top" alt="music notes">
+                    <img src="assets/images/music_notes.jpg" class="card-img-top" style="width: 400px; height: 400px;" alt="music notes">
+                    <div id="playlist-div"></div>
                     <div class="card-body">
-                        <p class="card-text">...</p>
+                        <div class="row">
+                            <div class="col-md-5"></div>
+                            <div class="col-md-2">
+                                <button type="button" id="get-sound" class="btn btn-light align-content">Relax</button>
+                            </div>
+                            <div class="col-md-5"></div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!-- End of row with cards -->
         </div>
-
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/image.js"></script>
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
 </body>
 
 </html>

@@ -1,14 +1,29 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-4"></div>
+    <div class="row" style="margin-top: 7rem;">
+        <div class="col-md-2"></div>
         <div class="col-md-4">
             <form id="add-quote">
                 <h5>Add a Quote</h5>
-                <input class="form-control" type="text" placeholder="Quote Text" name="text">
-                <input class="form-control" type="text" placeholder="Quote Category" name="category">
-                <button type="submit" class="btn btn-primary">Submit Quote</button>
+                <input class="form-control" type="text" placeholder="Quote Text" name="text" style="margin-top: .5rem;">
+                <input class="form-control" type="text" placeholder="Quote Category" name="category" style="margin-top: .5rem;">
+                <button type="submit" class="btn btn-light" style="margin-top: .5rem;">Submit Quote</button>
             </form>
+            <div id="quote-result" style="margin-top: .5rem; color: white;"></div>
+            <form id="add-playlist" style="margin-top: 5.5rem;">
+                <div class="form-group">
+                    <label for="playlist" style="color: white;">Add Playlist by Category</label>
+                    <select class="form-control" id="playlist">
+                    <option>Meditation</option>
+                    <option>Nature Sounds</option>
+                    <option>Comedy</option>
+                    <option>Chill</option>
+                    <option>Sleep</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-light" style="margin-top: .5rem;">Add Playlist</button>
+            </form>
+            <div id="playlist-result" style="color: white; margin-top: .5rem;"></div>
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-md-6"></div>
     </div>
 </div>

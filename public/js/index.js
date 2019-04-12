@@ -1,106 +1,6 @@
-// Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
-var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
-
-// The API object contains methods for each kind of request we'll make
-var API = {
-  saveExample: function(example) {
-    return $.ajax({
-      headers: {
-        "Content-Type": "application/json"
-      },
-      type: "POST",
-      url: "api/examples",
-      data: JSON.stringify(example)
-    });
-  },
-  getExamples: function() {
-    return $.ajax({
-      url: "api/examples",
-      type: "GET"
-    });
-  },
-  deleteExample: function(id) {
-    return $.ajax({
-      url: "api/examples/" + id,
-      type: "DELETE"
-    });
-  }
-};
-
-// refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
-    var $examples = data.map(function(example) {
-      var $a = $("<a>")
-        .text(example.text)
-        .attr("href", "/example/" + example.id);
-
-      var $li = $("<li>")
-        .attr({
-          class: "list-group-item",
-          "data-id": example.id
-        })
-        .append($a);
-
-      var $button = $("<button>")
-        .addClass("btn btn-danger float-right delete")
-        .text("ｘ");
-
-      $li.append($button);
-
-      return $li;
-    });
-
-    $exampleList.empty();
-    $exampleList.append($examples);
-  });
-};
-
-// handleFormSubmit is called whenever we submit a new example
-// Save the new example to the db and refresh the list
-var handleFormSubmit = function(event) {
-  event.preventDefault();
-
-  var example = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
-  };
-
-  if (!(example.text && example.description)) {
-    alert("You must enter an example text and description!");
-    return;
-  }
-
-  API.saveExample(example).then(function() {
-    refreshExamples();
-  });
-
-  $exampleText.val("");
-  $exampleDescription.val("");
-};
-
-// handleDeleteBtnClick is called when an example's delete button is clicked
-// Remove the example from the db and refresh the list
-var handleDeleteBtnClick = function() {
-  var idToDelete = $(this)
-    .parent()
-    .attr("data-id");
-
-  API.deleteExample(idToDelete).then(function() {
-    refreshExamples();
-  });
-};
-
-// Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
-
 // ====End of Example jQuery & start of functionality for add.handlebars===== //
 $(document).ready(function(){
-
+  // Adding a quote
   $("#add-quote").on("submit", function(event){
     event.preventDefault();
 
@@ -119,7 +19,78 @@ $(document).ready(function(){
       method: "POST",
       data: newQuote
     }).then(function(){
-      location.reload();
+      $("#quote-result").text("Quote added.");
+    });
+  });
+  
+  // Adding a playlist
+  $("#add-playlist").on("submit",function(event){
+    event.preventDefault();
+
+    var newData = {
+      category:$("#playlist").val()
+    }
+
+    $.ajax("/api/sounds", {
+      method: "POST",
+      data: newData
+    }).then(function(){
+      $("#playlist-result").text("Playlist added.");
+    });
+
+  });
+
+  // When user clicks image button
+  $("#get-image").on("click", function(){
+    var id = Math.round(Math.random() * 20);
+
+    $.ajax("/images/" + id, {
+      method: "GET"
+    }).then(function(data){
+      console.log(data);
+    });
+  });
+
+  // When user clicks random quote button
+  $("#get-random-quote").on("click", function(){
+    $.ajax("/quotes/", {
+      method: "GET"
+    }).then(function(data){
+      console.log(data);
+    });
+  });
+
+  // When user clicks user submitted quote
+  $("#get-user-quote").on("click", function(){
+    $.ajax("/quotes/user", {
+      method: "GET"
+    }).then(function(data){
+      console.log(data);
+      var index = Math.round(Math.random() * data.length);
+      var selectedQuote = data[index];
+      console.log(selectedQuote);
+    });
+  });
+
+  // When user clicks sound button
+  $("#get-sound").on("click", function(){
+    $.ajax("/api/sounds/", {
+      method: "GET"
+    }).then(function(data){
+      console.log(data);
+      var index = Math.round(Math.random() * data.length);
+      var selectedSound = data[index];
+      console.log(selectedSound);
     });
   });
 });
+
+
+var imageArray = ["calm_silhouette.jpg", "calm-1.jpg", "calm-2.jpg", "calm-3.jpg", "dog-being-taken-by-a-ufo.jpg" , "eagles-nest.jpg" , "eagles-nest2.jpg" , "flowers.jpg" , "flowers2.jpg" , "great-sand-dunes.jpg" , "inspiring_words.jpg" , "jerusalem-artichoke-blue-sky" , "lounging.jpg" , "music_notes.jpg" , "nola.jpg" , "ocean.jpg" , "reservoir.jpg" , "san-fran-sunset.jpg" , "shiprock.jpg" , "snowdog.jpg" , "stars.jpg" , "sun_clouds.jpg" , "sunset.jpg" , "sunset11.jpg" , "sunset12.jpg" , "trees.jpg" , "vines.jpg"]
+var calmImage = document.getElementById("calm-image")
+
+function addImage() {
+  var randomIndex = Math.floor(Math.random() * 26)
+  console.log("randomIndex: ", randomIndex)
+  calmImage.setAttribute("src", `assets/images/${imageArray[randomIndex]}`)
+}
