@@ -1,14 +1,11 @@
 body {
   background-image: url("../assets/images/sun_clouds.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .jumbotron {
-  background-image: url("../assets/images/sun_clouds.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  opacity: 0.7;
+  background-color: rgba(0,0,0,0);
 }
 
 .card {
