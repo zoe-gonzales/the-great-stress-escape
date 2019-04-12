@@ -20,6 +20,7 @@ module.exports = function(sequelize, DataTypes) {
   return Image;
 };
 
+
 // $(function () {
 //   var i = Image.imageurl;
 //   for (i=0; i < Math.floor(Math.random() * 21); i++){
@@ -31,6 +32,5 @@ module.exports = function(sequelize, DataTypes) {
 //        }).error(function () {})                            
 //   }
 // });
-
 
 

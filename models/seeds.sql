@@ -42,6 +42,19 @@ INSERT INTO Sounds (imageurl, category) VALUES ('https://open.spotify.com/embed/
 
 INSERT INTO Sounds (imageurl, category) VALUES ('https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWZqd5JICZI0u', 'meditation');
 
+-- Spotify playlists
+INSERT INTO Sounds (imageurl, category) VALUES ('<iframe src="https://open.spotify.com/embed/user/smoothllc/playlist/0d6TmkrRR94zuz0Or0zTve" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>', 'spa playlist');
+
+INSERT INTO Sounds (imageurl, category) VALUES ('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWV90ZWj21ygB" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>', 'waking up by the beach');
+
+INSERT INTO Sounds (imageurl, category) VALUES ('<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWZyr63wC7yP0" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>', 'waterfalls, rivers, and creeks');
+
+<iframe src="https://open.spotify.com/embed/user/smoothllc/playlist/0d6TmkrRR94zuz0Or0zTve" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWV90ZWj21ygB" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+<iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DWZyr63wC7yP0" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
 -- Spotify embed structure
 -- <iframe src="https://open.spotify.com/embed/user/spotify/playlist/37i9dQZF1DX4PP3DA4J0N8" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
 

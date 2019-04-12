@@ -18,3 +18,11 @@ CREATE TABLE quotes
 	quote VARCHAR(400) NOT NULL,
 	category VARCHAR NOT NULL
 );
+
+/* USE destressordb;
+CREATE TABLE sounds
+(
+	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	playlisturl VARCHAR(400) NOT NULL,
+	category VARCHAR(100)
+); */

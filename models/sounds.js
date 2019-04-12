@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
   var Sounds = sequelize.define("Sounds", {
-    imageurl: {
+    playlisturl: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -16,6 +16,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.DATE,
       defaultValue: sequelize.literal('NOW()')
     }
-  });
+  },
+  {
+    timestamps: false
+  }
+  );
   return Sounds;
 };
