@@ -38,7 +38,7 @@ module.exports = function(app) {
 
   function addSound(source, category, res){
     db.Sounds.create({
-      imageurl: source,
+      playlisturl: source,
       category: category
     }).then(function(result) {
       res.json(result);
