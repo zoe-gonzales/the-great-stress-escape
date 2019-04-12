@@ -1,37 +1,39 @@
 # Welcome to The Great Stress Escape! 
-https://thegreatstressescape.herokuapp.com/
 
-We created this web page to give people break when when he or she can not get away from their computer. Like any web page, you can spend as much time on it as you would like. However, we intended most of our users to spend just a few minutes, if not less on this page. 
+Vistit the site at: https://thegreatstressescape.herokuapp.com/
 
-# Calming Images
+We created this web page to give people break when when they cannot get away from the stressful situation that they're in (or their computer). Like any web page, users can spend as much time on it as they would like. However, our intent was to provide a site where users can spend just a few minutes, if not less, for emergency attitude adjustment.
+
+## Calming Images
+
 Clicking the “Calm” button will display randomly generated, relaxing images. These images have been submitted by the creators of this web page. They call themselves the Fabulous Five.
 
 <img src="calming-images.gif" width="250" height="250" />
 
 
-# Inspiring Words
-Clicking the “Get Inspiration” button will display random quotes from the npm iQuotes. Clicking “Give Inspiration” button will display user submitted quotes. 
+## Inspiring Words
+
+Clicking the “Get Inspiration” button will display random quotes from the npm iQuotes package. Clicking “Give Inspiration” button will display quotes submitted by users.
 
 <img src="inspiring-words.gif" width="250" height="250" />
 
-# Soothing Sounds
-Clicking the “Relax” button will cycle through the Spotify API. There are is mixture of comedy channels, soothing sounds, and nature songs. If you do not care for the selection that is displayed, click the “Relax” button again to get a different selection. 
+## Soothing Sounds
+
+Clicking the “Relax” button will cycle through the Spotify API and provide users with a mixture of comedy channels, soothing music, and nature sounds. Users can click the "Relax" button again if the current displayed selection is not to their liking.
 
 <img src="soothing-sounds.gif" width="250" height="250" />
 
-# Project2
 For this project we used:
 
 * Bootstrap and Handlebars
 * Node and Express Server
-* MySQL - Sequelize
+* MySQL and Sequelize
 * GET and POST routes
-* Request existing data and send new data to the database
-
+* Requests of existing data and sending new data to the database
 
 Team Members:
-Ben Zamora
-Jason Violet
-Lynn Amsbury
-Sara Overby
-Zoe Gonzales
+* Ben Zamora
+* Jason Violet
+* Lynn Amsbury
+* Sara Overby
+* Zoe Gonzales
