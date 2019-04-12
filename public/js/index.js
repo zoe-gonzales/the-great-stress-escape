@@ -58,6 +58,7 @@ $(document).ready(function(){
     }).then(function(data){
       console.log(data);
       $("#quote-image").hide();
+      $("#quote").empty();
       var quote = $("<p>");
       var author = $("<p>");
       var category = $("<p>");
