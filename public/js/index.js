@@ -98,24 +98,10 @@ $(document).ready(function(){
 
     });
   });
-
-/*
-  $(function () {
-    var i = Image.imageurl;
-    for (i=0; i < Math.floor(Math.random() * 21); i++){
-        var curImg = i;
-        var img = new Image();         
-        $(img).load(function () {                                 
-            $('#imageLoad').removeClass('loading')
-                        .append($('<img src="'+this.curImg+'">').append(this));
-        }).error(function () {})                            
-    }
-  });
-  */
 });
 
 // Image Changer
-var imageArray = ["calm_silhouette.jpg", "calm-1.jpg", "calm-2.jpg", "calm-3.jpg", "dog-being-taken-by-a-ufo.jpg" , "eagles-nest.jpg" , "eagles-nest2.jpg" , "flowers.jpg" , "flowers2.jpg" , "great-sand-dunes.jpg" , "inspiring_words.jpg" , "jerusalem-artichoke-blue-sky.jpg" , "lounging.jpg" , "music_notes.jpg" , "nola.jpg" , "ocean.jpg" , "reservoir.jpg" , "san-fran-sunset.jpg" , "shiprock.jpg" , "snowdog.jpg" , "stars.jpg" , "sun_clouds.jpg" , "sunset.jpg" , "sunset11.jpg" , "sunset12.jpg" , "trees.jpg" , "vines.jpg"]
+var imageArray = ["calm-1.jpg", "calm-2.jpg", "calm-3.jpg", "dog-being-taken-by-a-ufo.jpg" , "eagles-nest.jpg" , "eagles-nest2.jpg" , "flowers.jpg" , "flowers2.jpg" , "great-sand-dunes.jpg" , "inspiring_words.jpg" , "jerusalem-artichoke-blue-sky.jpg" , "lounging.jpg" , "music_notes.jpg" , "nola.jpg" , "ocean.jpg" , "reservoir.jpg" , "san-fran-sunset.jpg" , "shiprock.jpg" , "snowdog.jpg" , "stars.jpg" , "sun_clouds.jpg" , "sunset.jpg" , "sunset11.jpg" , "sunset12.jpg" , "trees.jpg" , "vines.jpg"]
 var calmImage = document.getElementById("calm-image")
 
 function addImage() {
