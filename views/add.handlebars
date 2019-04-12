@@ -1,17 +1,20 @@
 <div class="container">
     <div class="row" style="margin-top: 7rem;">
-        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            
+        </div>
         <div class="col-md-4">
+            
             <form id="add-quote">
                 <h5>Add a Quote</h5>
                 <input class="form-control" type="text" placeholder="Quote Text" name="text" style="margin-top: .5rem;">
                 <input class="form-control" type="text" placeholder="Quote Category" name="category" style="margin-top: .5rem;">
-                <button type="submit" class="btn btn-light" style="margin-top: .5rem;">Submit Quote</button>
+                <button type="submit" class="btn btn-light add-btn">Submit Quote</button>
             </form>
-            <div id="quote-result" style="margin-top: .5rem; color: white;"></div>
+            <div id="quote-result" class="text textColor"></div>
             <form id="add-playlist" style="margin-top: 5.5rem;">
                 <div class="form-group">
-                    <label for="playlist" style="color: white;">Add Playlist by Category</label>
+                    <label for="playlist" class="textColor">Add Playlist by Category</label>
                     <select class="form-control" id="playlist">
                     <option>Meditation</option>
                     <option>Nature Sounds</option>
@@ -20,9 +23,10 @@
                     <option>Sleep</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-light" style="margin-top: .5rem;">Add Playlist</button>
+                <button type="submit" class="btn btn-light add-btn">Add Playlist</button>
             </form>
-            <div id="playlist-result" style="color: white; margin-top: .5rem;"></div>
+            <div id="playlist-result" class="text textColor"></div>
+        <a href="/" class="btn btn-light align-content home-btn">Home</a>
         </div>
         <div class="col-md-6"></div>
     </div>

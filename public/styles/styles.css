@@ -12,7 +12,19 @@ body {
   opacity: 0.7;
 }
 
-
 #playlist-div, #calm-image-div {
   text-align: center;
+}
+
+.add-btn,
+.text {
+  margin-top: .5rem;
+}
+
+.home-btn {
+  margin-top: 3.5rem;
+}
+
+.textColor {
+  color: white;
 }
