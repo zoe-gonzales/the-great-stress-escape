@@ -83,7 +83,7 @@ $(document).ready(function(){
       console.log("INDEX: " + index);
       var selectedSound = data[index];
       console.log(selectedSound);
-      var playlisturl = selectedSound.imageurl;
+      var playlisturl = selectedSound.playlisturl;
       $("#playlist-div").html('<iframe src="'+playlisturl+'" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>');
 
     });
