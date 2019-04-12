@@ -69,6 +69,7 @@ $(document).ready(function(){
     });
   });
 
+
   // When user clicks user submitted quote
   $("#get-user-quote").on("click", function(){
     $.ajax("/quotes/user", {
@@ -78,6 +79,13 @@ $(document).ready(function(){
       var index = Math.floor(Math.random() * data.length);
       var selectedQuote = data[index];
       console.log(selectedQuote);
+      $("#quote-image").hide();
+      $("#quote").empty();
+      var quote = $("<p>");
+      var category = $("<p>");
+      quote.text(`Quote: ${selectedQuote.quote}`);
+      category.text(`Category: ${selectedQuote.category}`);
+      $("#quote").append(quote, category);
     });
   });
 
