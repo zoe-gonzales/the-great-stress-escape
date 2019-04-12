@@ -98,20 +98,6 @@ $(document).ready(function(){
 
     });
   });
-
-/*
-  $(function () {
-    var i = Image.imageurl;
-    for (i=0; i < Math.floor(Math.random() * 21); i++){
-        var curImg = i;
-        var img = new Image();         
-        $(img).load(function () {                                 
-            $('#imageLoad').removeClass('loading')
-                        .append($('<img src="'+this.curImg+'">').append(this));
-        }).error(function () {})                            
-    }
-  });
-  */
 });
 
 // Image Changer
