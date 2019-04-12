@@ -20,6 +20,14 @@ Clicking the “Relax” button will cycle through the Spotify API. There are is
 <img src="soothing-sounds.gif" width="250" height="250" />
 
 # Project2
+For this project we used:
+
+* Bootstrap and Handlebars
+* Node and Express Server
+* MySQL - Sequelize
+* GET and POST routes
+* Request existing data and send new data to the database
+
 
 Team Members:
 Ben Zamora
